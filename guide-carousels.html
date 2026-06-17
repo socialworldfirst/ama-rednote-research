@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>观影指南 · 5 套小红书视觉方向（完整 carousel）</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#eceae6;color:#16181d;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:1280px;margin:0 auto;padding:48px 26px 110px}
+.eyebrow{font-size:12px;letter-spacing:.16em;color:#9aa0a8;font-weight:600;margin-bottom:14px}
+.eyebrow a{color:#2f6df6;text-decoration:none}
+h1{font-size:28px;font-weight:760;letter-spacing:-.01em;line-height:1.25;margin-bottom:12px}
+.lead{font-size:16px;color:#5b6068;max-width:80ch;line-height:1.6}
+.lead b{color:#16181d;font-weight:660}
+.struct{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 6px}
+.struct span{font-size:12px;color:#5b6068;background:#fff;border:1px solid #ddd;border-radius:20px;padding:5px 12px}
+.struct b{color:#16181d}
+
+.opt{margin-top:52px}
+.ohead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.ohead .oc{font-size:13px;font-weight:800;color:#fff;background:#16181d;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ohead h2{font-size:21px;font-weight:740;letter-spacing:-.01em}
+.ohead .vibe{font-size:13px;color:#8a8f98}
+.obest{font-size:12.5px;color:#5b6068;margin:6px 0 16px}.obest b{color:#16181d;font-weight:640}
+
+.stage{display:flex;gap:14px;overflow-x:auto;padding:6px 2px 18px;scroll-snap-type:x mandatory}
+.stage::-webkit-scrollbar{height:9px}.stage::-webkit-scrollbar-thumb{background:#cfcdc8;border-radius:9px}
+.sl{flex:0 0 268px;height:358px;border-radius:16px;overflow:hidden;position:relative;scroll-snap-align:start;box-shadow:0 6px 22px rgba(0,0,0,.10);display:flex;flex-direction:column}
+.pn{position:absolute;top:11px;left:13px;z-index:9;font-size:10.5px;font-weight:700;letter-spacing:.06em;opacity:.7}
+.cap{font-size:10.5px;color:#9aa0a8;text-align:center;margin-top:7px}
+.still{position:absolute;inset:0;z-index:0}
+.z{position:relative;z-index:2}
+
+/* ===== A 胶片电影感 ===== */
+.oa{background:#14110c;color:#f2e8d5;font-family:Georgia,"Songti SC","Times New Roman",serif;padding:26px 22px;justify-content:flex-end}
+.oa .pn{color:#cda968}
+.oa::before,.oa::after{content:"";position:absolute;left:0;right:0;height:26px;background:#000;z-index:3}
+.oa::before{top:0}.oa::after{bottom:0}
+.oa .still{background:radial-gradient(120% 90% at 50% 22%,#5a4327 0%,#2c2013 45%,#14110c 90%);opacity:.96}
+.oa .gold{color:#d8b46a}
+.oa h3{font-size:27px;line-height:1.22;font-weight:700;letter-spacing:.01em}
+.oa .sm{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#cda968;font-family:-apple-system,sans-serif;font-weight:600}
+.oa .body{font-size:13.5px;line-height:1.7;color:#e7dcc6;margin-top:8px;font-family:-apple-system,"PingFang SC",sans-serif}
+.oa .qm{font-size:60px;line-height:.6;color:#d8b46a;opacity:.5;font-family:Georgia,serif}
+.oa .flag{font-size:14px;line-height:2;font-family:-apple-system,sans-serif;color:#efe6d2}
+.oa .flag .hl{color:#d8b46a;font-weight:700}
+.oa .rule{height:1px;background:#cda96833;margin:12px 0}
+.oa .logo{font-family:-apple-system,sans-serif;font-weight:700;letter-spacing:.04em;color:#d8b46a;font-size:15px}
+
+/* ===== B 暖色手账剪贴 ===== */
+.ob{background:#f6ead4;color:#3a3026;padding:24px 20px;font-family:-apple-system,"PingFang SC",sans-serif}
+.ob .still{background:repeating-linear-gradient(0deg,#f3e6cd 0 22px,#f0e2c6 22px 23px)}
+.ob .tape{position:absolute;width:84px;height:26px;background:rgba(194,84,58,.32);z-index:4;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.ob .tape.t1{top:-8px;left:30px;transform:rotate(-7deg);background:rgba(120,150,110,.34)}
+.ob .tape.t2{top:14px;right:-18px;transform:rotate(8deg);background:rgba(214,160,70,.36)}
+.ob .polaroid{background:#fff;padding:9px 9px 30px;box-shadow:0 4px 12px rgba(0,0,0,.12);transform:rotate(-2.5deg);border-radius:3px}
+.ob .polaroid .ph{height:118px;border-radius:2px;background:radial-gradient(120% 100% at 40% 30%,#caa06a,#7a5a36)}
+.ob .polaroid .cp{font-family:"Bradley Hand","Comic Sans MS",cursive;font-size:13px;color:#6b5a44;text-align:center;margin-top:7px}
+.ob h3{font-size:23px;font-weight:800;line-height:1.3;letter-spacing:-.01em}
+.ob .hand{font-family:"Bradley Hand","Comic Sans MS",cursive;color:#c2543a;font-size:15px}
+.ob .stamp{position:absolute;top:16px;right:16px;width:48px;height:56px;background:#fff;border:1px dashed #b98e57;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:24px;z-index:5;transform:rotate(5deg)}
+.ob .tick{background:#fff;border:1px dashed #cbb079;border-radius:8px;padding:9px 12px;font-size:13.5px;line-height:1.85}
+.ob .tick .hl{color:#c2543a;font-weight:800}
+.ob .note{background:#fffdf6;padding:13px 14px;box-shadow:0 3px 9px rgba(0,0,0,.08);border-radius:3px;font-size:14px;line-height:1.65}
+.ob .by{font-family:"Bradley Hand",cursive;color:#9a8463;font-size:12.5px;margin-top:6px}
+.ob .badge{display:inline-block;background:#c2543a;color:#fff;font-weight:800;font-size:12px;border-radius:20px;padding:3px 11px}
+
+/* ===== C 大字报标题党 ===== */
+.oc{background:#fff4ea;color:#1d1407;padding:0;font-family:-apple-system,"PingFang SC",sans-serif;font-weight:800}
+.oc .top{background:#e8442a;color:#fff;padding:20px 18px}
+.oc .bot{padding:18px;flex:1;display:flex;flex-direction:column}
+.oc h3{font-size:30px;line-height:1.12;letter-spacing:-.02em}
+.oc .huge{font-size:40px;line-height:1;letter-spacing:-.02em}
+.oc .kick{font-size:12px;font-weight:800;letter-spacing:.1em;background:#1d1407;color:#ffd23c;display:inline-block;padding:3px 9px;border-radius:4px}
+.oc .em{font-size:30px}
+.oc .row{font-size:15px;font-weight:700;padding:6px 0;border-bottom:1.5px dashed #e8b9a8;line-height:1.3}
+.oc .row.star{background:#ffe9c2;margin:0 -6px;padding:7px 6px;border:0;border-radius:6px}
+.oc .mark{background:linear-gradient(transparent 55%,#ffd23c 55%);font-weight:900}
+.oc .big{font-size:24px;line-height:1.3;font-weight:900}
+.oc .by{font-size:12.5px;font-weight:700;color:#9a6b53}
+.oc .cta{margin-top:auto;background:#1d1407;color:#fff;border-radius:10px;padding:12px 14px;font-size:15px;line-height:1.45;font-weight:800}
+.oc .cta .y{color:#ffd23c}
+
+/* ===== D 极简编辑杂志风 ===== */
+.od{background:#f6f4ef;color:#191919;padding:30px 26px;font-family:"Optima","Songti SC",Georgia,serif;justify-content:space-between}
+.od .lab{font-family:-apple-system,sans-serif;font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:#a59f93;font-weight:600}
+.od h3{font-size:30px;font-weight:600;line-height:1.18;letter-spacing:-.01em}
+.od .accent{color:#8c2b22}
+.od .frame{height:120px;background:linear-gradient(135deg,#d9d2c5,#b7ad9a);position:relative}
+.od .frame::after{content:"";position:absolute;inset:8px;border:1px solid rgba(255,255,255,.55)}
+.od .thin{height:1px;background:#1919191a;margin:14px 0}
+.od .body{font-family:-apple-system,"PingFang SC",sans-serif;font-size:13.5px;line-height:1.8;color:#3a3a38}
+.od .pq{font-size:21px;line-height:1.45;font-weight:600;letter-spacing:-.01em}
+.od .by{font-family:-apple-system,sans-serif;font-size:11.5px;letter-spacing:.05em;color:#8c8678;text-transform:uppercase}
+.od .rowd{display:flex;justify-content:space-between;font-family:-apple-system,sans-serif;font-size:13px;padding:7px 0;border-bottom:1px solid #19191912}
+.od .rowd b{font-weight:640}.od .rowd .d{color:#8c2b22;font-weight:640}
+.od .logo{font-family:-apple-system,sans-serif;font-weight:700;letter-spacing:.02em;font-size:14px}
+
+/* ===== E 航空信复古邮政 ===== */
+.oe{padding:14px;background:
+  linear-gradient(#f5efe1,#f5efe1) padding-box,
+  repeating-linear-gradient(45deg,#c0392b 0 9px,#fff 9px 18px,#2f5d8a 18px 27px,#fff 27px 36px) border-box;
+  border:7px solid transparent;color:#2a2016;font-family:-apple-system,"PingFang SC",sans-serif}
+.oe .inner{background:#f5efe1;flex:1;display:flex;flex-direction:column;padding:14px 14px;position:relative}
+.oe .par{font-family:"Courier New",monospace;font-size:9.5px;letter-spacing:.18em;color:#2f5d8a;font-weight:700;border:1px solid #2f5d8a;display:inline-block;padding:1px 5px;border-radius:2px}
+.oe h3{font-size:24px;font-weight:800;line-height:1.25;color:#3a2c1c}
+.oe .stamp{position:absolute;top:10px;right:10px;width:50px;height:58px;background:#fff;border:1px dashed #c0392b;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:26px;transform:rotate(4deg)}
+.oe .pmk{position:absolute;top:18px;right:54px;width:42px;height:42px;border:1.5px solid #c0392b88;border-radius:50%;color:#c0392b99;font-family:"Courier New",monospace;font-size:7px;display:flex;align-items:center;justify-content:center;text-align:center;transform:rotate(-12deg);line-height:1.2}
+.oe .mono{font-family:"Courier New",monospace;font-size:13px;line-height:1.9;color:#3a2c1c}
+.oe .mono .hl{color:#c0392b;font-weight:700}
+.oe .letter{font-family:"Songti SC",Georgia,serif;font-size:15px;line-height:1.7;color:#3a2c1c}
+.oe .by{font-family:"Courier New",monospace;font-size:11px;color:#7a6a52;margin-top:8px}
+.oe .seal{display:inline-block;background:#c0392b;color:#fff;font-weight:800;font-size:12.5px;border-radius:3px;padding:4px 11px;letter-spacing:.04em}
+.oe .logo{font-weight:800;color:#c0392b;font-size:15px;letter-spacing:.03em}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="eyebrow">万里汇（WorldFirst） · 观影指南 carousel · 视觉方向 · <a href="./">研究首页</a> · <a href="./carousels.html">21 方案 deck</a></p>
+<h1>观影指南，5 套小红书视觉方向（完整 carousel）</h1>
+<p class="lead">同一套你锁定的 6 张结构，做 5 种完全不同的视觉语言。<b>这是用 CSS 模拟的成品观感（让你直接看到风格），剧照/海报位用色块示意，真图交设计师按选定方向出。</b>横向滑看每一套。</p>
+<div class="struct">
+  <span><b>1</b> 钩子</span><span><b>2</b> 全球上映时间表</span><span><b>3</b> 为什么必看·感言①</span><span><b>4</b> 感言②</span><span><b>5</b> 万里汇赞助英国首映</span><span><b>6</b> 海外的你·落点</span>
+</div>
+
+<!-- ============ A 胶片电影感 ============ -->
+<div class="opt">
+  <div class="ohead"><span class="oc">A</span><h2>胶片电影感</h2><span class="vibe">moody · 高级 · 像电影博主的帖</span></div>
+  <div class="obest">最适合：<b>IG + 品牌高级感</b>。情绪重、转发体面，但偏"看"不偏"攻略收藏"。</div>
+  <div class="stage">
+    <div><div class="sl oa"><span class="pn gold">1 / 6</span><div class="still"></div><div class="z"><div class="sm">海外观影指南</div><h3 style="margin-top:10px">《给阿嬷的<span class="gold">情书</span>》<br>引爆海外华人圈</h3></div></div><div class="cap">钩子·剧照压字</div></div>
+    <div><div class="sl oa" style="justify-content:flex-start;padding-top:40px"><span class="pn gold">2 / 6</span><div class="still" style="opacity:.4"></div><div class="z"><div class="sm">全球上映时间</div><div class="flag" style="margin-top:14px">🇲🇾 马来西亚　<span class="hl">6/18 已映</span><br>🇸🇬 新加坡　　 6/18 同期<br>🇬🇧 英国　　　 <span class="hl">6/26 首映 ⭐</span><br>🇺🇸🇨🇦🇦🇺　北美 · 澳洲 陆续<br>🇫🇷🇮🇪🇯🇵🇰🇷🇹🇭🇻🇳 陆续</div></div></div><div class="cap">全球档期·烫金</div></div>
+    <div><div class="sl oa"><span class="pn gold">3 / 6</span><div class="still"></div><div class="z"><div class="sm">为什么必看</div><div class="qm">「</div><h3 style="font-size:21px">以前那一代人的爱，是把赚的钱寄回家乡。</h3><div class="body" style="color:#cda968">—— 槟城观众</div></div></div><div class="cap">感言①</div></div>
+    <div><div class="sl oa"><span class="pn gold">4 / 6</span><div class="still"></div><div class="z"><div class="qm">「</div><h3 style="font-size:21px">我老爸最后一次汇钱回家乡，是 1977 年。</h3><div class="body" style="color:#cda968">—— 新加坡观众　·　9.1 分</div></div></div><div class="cap">感言②</div></div>
+    <div><div class="sl oa" style="justify-content:center;text-align:center"><span class="pn gold">5 / 6</span><div class="still" style="background:radial-gradient(120% 90% at 50% 50%,#3a2c17,#14110c)"></div><div class="z"><div class="sm" style="text-align:center">WorldFirst × Dear You</div><h3 class="gold" style="margin:14px 0;font-size:25px">赞助英国首映</h3><div class="logo">6 · 26　LONDON</div><div class="body">和全球华人，一起看这封家书</div></div></div><div class="cap">赞助·联名</div></div>
+    <div><div class="sl oa" style="justify-content:center;text-align:center"><span class="pn gold">6 / 6</span><div class="still" style="background:#14110c"></div><div class="z"><h3 style="font-size:22px">海外的你</h3><div class="rule"></div><div class="body">做生意 · 收款 · 把钱寄回家<br>也可以用万里汇</div><div class="body" style="color:#cda968;margin-top:6px">不管你在哪，是谁</div><div class="logo" style="margin-top:14px">WorldFirst 万里汇</div></div></div><div class="cap">落点·品牌</div></div>
+  </div>
+</div>
+
+<!-- ============ B 暖色手账剪贴 ============ -->
+<div class="opt">
+  <div class="ohead"><span class="oc">B</span><h2>暖色手账剪贴</h2><span class="vibe">胶带 · 拍立得 · 邮票 · 小红书女生风</span></div>
+  <div class="obest">最适合：<b>小红书原生 · 高收藏</b>。亲密、可爱、邮票元素正好扣"侨批=信"，最像爆款攻略帖。</div>
+  <div class="stage">
+    <div><div class="sl ob"><span class="pn">1 / 6</span><div class="tape t1"></div><div class="tape t2"></div><div class="stamp">✉️</div><div class="z" style="margin-top:18px"><div class="polaroid"><div class="ph"></div><div class="cp">给阿嬷的情书 ·  海外观影</div></div><h3 style="margin-top:16px">引爆海外<br>华人圈 🔥</h3><div class="hand">海外观影指南 📍</div></div></div><div class="cap">钩子·拍立得</div></div>
+    <div><div class="sl ob"><span class="pn">2 / 6</span><div class="tape t1"></div><div class="z" style="margin-top:14px"><div class="hand" style="font-size:17px">🎬 全球上映时间</div><div class="tick" style="margin-top:10px">🇲🇾 马来 <span class="hl">6/18 已映</span><br>🇸🇬 新加坡 6/18<br>🇬🇧 英国 <span class="hl">6/26 首映 ⭐</span><br>🇺🇸🇨🇦🇦🇺 陆续<br>🇫🇷🇮🇪🇯🇵🇰🇷🇹🇭🇻🇳 陆续</div><div class="hand" style="margin-top:10px;text-align:center">在你的城市找到它 ✨</div></div></div><div class="cap">全球档期·票根</div></div>
+    <div><div class="sl ob"><span class="pn">3 / 6</span><div class="stamp" style="font-size:18px">★</div><div class="z" style="margin-top:14px"><div class="badge">为什么必看</div><div class="note" style="transform:rotate(-1.5deg);margin-top:14px">「以前那一代人的爱，是把赚的钱寄回家乡。」<div class="by">—— 槟城观众</div></div></div></div><div class="cap">感言①·便签</div></div>
+    <div><div class="sl ob"><span class="pn">4 / 6</span><div class="tape t2"></div><div class="z" style="margin-top:20px"><div class="note" style="transform:rotate(1.5deg)">「我老爸最后一次汇钱回家乡，是 1977 年。」<div class="by">—— 新加坡观众</div></div><div class="hand" style="margin-top:14px;font-size:20px;text-align:center">9.1 分 · 哭到头疼</div></div></div><div class="cap">感言②·便签</div></div>
+    <div><div class="sl ob" style="justify-content:center;text-align:center"><span class="pn">5 / 6</span><div class="stamp">🎟️</div><div class="z"><div class="hand" style="font-size:16px">WorldFirst × 给阿嬷的情书</div><h3 style="margin:12px 0">万里汇赞助<br>英国首映</h3><div class="badge">6 · 26　伦敦</div><div class="hand" style="margin-top:12px">一起看这封家书 💌</div></div></div><div class="cap">赞助</div></div>
+    <div><div class="sl ob" style="justify-content:center;text-align:center"><span class="pn">6 / 6</span><div class="tape t1"></div><div class="z"><h3>海外的你 🌏</h3><div class="note" style="margin-top:12px">做生意 · 收款 · 把钱寄回家<br><b>也可以用万里汇</b></div><div class="hand" style="margin-top:12px">不管你在哪，是谁</div><div class="badge" style="margin-top:12px;background:#3a3026">WorldFirst 万里汇</div></div></div><div class="cap">落点·品牌</div></div>
+  </div>
+</div>
+
+<!-- ============ C 大字报标题党 ============ -->
+<div class="opt">
+  <div class="ohead"><span class="oc">C</span><h2>大字报标题党</h2><span class="vibe">高对比 · 大字 · 干货攻略风</span></div>
+  <div class="obest">最适合：<b>小红书涨粉涨收藏</b>。最"刷到就停"、信息一眼到位，封面党能力最强，但最不"高级"。</div>
+  <div class="stage">
+    <div><div class="sl oc"><span class="pn" style="color:#fff">1 / 6</span><div class="top"><div class="kick">海外观影指南 📍</div><h3 class="huge" style="margin-top:12px">引爆<br>海外华人圈</h3></div><div class="bot"><div style="font-size:17px;font-weight:800">《给阿嬷的情书》</div><div style="font-size:13px;color:#9a6b53;margin-top:6px;font-weight:700">9.1 分 · 票房 17 亿 · 全程潮汕话</div><div class="cta" style="margin-top:auto">往右滑 → 看你的城市<br>几时能看 🎬</div></div></div><div class="cap">钩子·大字</div></div>
+    <div><div class="sl oc"><span class="pn">2 / 6</span><div class="top" style="background:#1d1407;color:#ffd23c"><div class="huge" style="font-size:30px">🎬 全球<br>上映时间</div></div><div class="bot"><div class="row star">🇬🇧 英国　<span class="mark">6/26 首映</span> ⭐</div><div class="row">🇲🇾 马来　6/18 已映</div><div class="row">🇸🇬 新加坡　6/18 同期</div><div class="row">🇺🇸🇨🇦🇦🇺 北美澳洲 陆续</div><div class="row" style="border:0">🇫🇷🇮🇪🇯🇵🇰🇷🇹🇭🇻🇳 陆续</div></div></div><div class="cap">全球档期·清单</div></div>
+    <div><div class="sl oc"><span class="pn" style="color:#fff">3 / 6</span><div class="top"><div class="kick" style="background:#fff;color:#e8442a">为什么必看</div><div class="big" style="margin-top:14px;color:#fff">以前那一代人的爱<br><span class="mark" style="color:#1d1407">是把赚的钱寄回家乡</span></div></div><div class="bot"><div class="by">—— 槟城观众</div><div style="font-size:13px;color:#5b6068;margin-top:8px;font-weight:700">看完，每个海外华人都想起了自己</div></div></div><div class="cap">感言①</div></div>
+    <div><div class="sl oc"><span class="pn">4 / 6</span><div class="bot" style="flex:1;justify-content:center"><div class="kick">真实评论</div><div class="big" style="margin-top:14px">「我老爸最后一次<br>汇钱回家乡<br>是 <span class="mark">1977 年</span>。」</div><div class="by" style="margin-top:10px">—— 新加坡观众</div><div class="huge" style="margin-top:16px;color:#e8442a">9.1<span style="font-size:18px">分</span></div></div></div><div class="cap">感言②</div></div>
+    <div><div class="sl oc"><span class="pn" style="color:#fff">5 / 6</span><div class="top" style="text-align:center"><div class="kick" style="background:#fff;color:#e8442a">WorldFirst × 给阿嬷的情书</div><h3 class="huge" style="margin-top:14px">赞助<br>英国首映</h3></div><div class="bot" style="text-align:center;justify-content:center"><div class="huge" style="color:#e8442a">6.26</div><div style="font-weight:800;font-size:16px">伦敦 LONDON</div><div style="font-size:13px;color:#9a6b53;font-weight:700;margin-top:8px">和全球华人一起看这封家书</div></div></div><div class="cap">赞助</div></div>
+    <div><div class="sl oc"><span class="pn">6 / 6</span><div class="bot" style="flex:1;justify-content:center;text-align:center"><div class="huge">海外的你</div><div style="font-size:17px;font-weight:800;margin-top:14px;line-height:1.7">做生意 · 收款<br>把钱寄回家</div><div class="big" style="color:#e8442a;margin-top:8px">也可以用万里汇</div><div class="cta" style="margin-top:18px">不管你在哪，是谁<br><span class="y">WorldFirst 万里汇</span></div></div></div><div class="cap">落点·品牌</div></div>
+  </div>
+</div>
+
+<!-- ============ D 极简编辑杂志风 ============ -->
+<div class="opt">
+  <div class="ohead"><span class="oc">D</span><h2>极简编辑杂志风</h2><span class="vibe">留白 · 衬线 · 高级感</span></div>
+  <div class="obest">最适合：<b>品牌调性 / IG</b>。最"高级"、最体面，适合做万里汇官方门面，但攻略性弱、互动钩弱。</div>
+  <div class="stage">
+    <div><div class="sl od"><span class="pn">1 / 6</span><div class="z"><div class="lab">海外观影指南</div></div><div class="z"><h3>《给阿嬷<br>的情书》</h3><div class="lab" style="margin-top:10px">引爆海外华人圈 · A GUIDE</div></div><div class="z"><div class="thin"></div><div class="body">潮汕话 · 侨批 · 9.1 分</div></div></div><div class="cap">钩子·封面</div></div>
+    <div><div class="sl od"><span class="pn">2 / 6</span><div class="z"><div class="lab">Now Showing · 全球上映</div></div><div class="z"><div class="rowd"><b>🇬🇧 英国</b><span class="d">6 / 26 首映</span></div><div class="rowd"><b>🇲🇾 马来西亚</b><span>6 / 18 已映</span></div><div class="rowd"><b>🇸🇬 新加坡</b><span>6 / 18</span></div><div class="rowd"><b>🇺🇸 🇨🇦 🇦🇺</b><span>陆续</span></div><div class="rowd" style="border:0"><b>🇫🇷 🇮🇪 🇯🇵 🇰🇷 🇹🇭 🇻🇳</b><span>陆续</span></div></div><div class="z lab">在你的城市，找到它</div></div><div class="cap">全球档期·列表</div></div>
+    <div><div class="sl od"><span class="pn">3 / 6</span><div class="z"><div class="lab">为什么必看 · No.1</div></div><div class="z"><div class="pq">以前那一代人的爱，是把赚的钱，<span class="accent">寄回家乡</span>。</div></div><div class="z"><div class="thin"></div><div class="by">槟城观众</div></div></div><div class="cap">感言①·pull quote</div></div>
+    <div><div class="sl od"><span class="pn">4 / 6</span><div class="z"><div class="lab">为什么必看 · No.2</div></div><div class="z"><div class="pq">我老爸最后一次汇钱回家乡，是 <span class="accent">1977 年</span>。</div></div><div class="z"><div class="thin"></div><div class="by">新加坡观众　·　9.1 / 10</div></div></div><div class="cap">感言②·pull quote</div></div>
+    <div><div class="sl od" style="justify-content:center"><span class="pn">5 / 6</span><div class="z" style="text-align:center"><div class="lab">WorldFirst presents</div><h3 style="margin:16px 0" class="accent">赞助英国首映</h3><div class="frame" style="height:60px;margin:0 0 12px"></div><div class="body" style="text-align:center">6 · 26　London<br>和全球华人一起看这封家书</div></div></div><div class="cap">赞助</div></div>
+    <div><div class="sl od" style="justify-content:center"><span class="pn">6 / 6</span><div class="z" style="text-align:center"><div class="lab">海外的你</div><div class="pq" style="margin:16px 0">做生意 · 收款<br>把钱寄回家<br><span class="accent">也可以用万里汇</span></div><div class="by">不管你在哪，是谁</div><div class="thin"></div><div class="logo">WorldFirst 万里汇</div></div></div><div class="cap">落点·品牌</div></div>
+  </div>
+</div>
+
+<!-- ============ E 航空信复古邮政 ============ -->
+<div class="opt">
+  <div class="ohead"><span class="oc">E</span><h2>航空信复古邮政</h2><span class="vibe">par-avion 红蓝条 · 邮戳 · 最扣侨批</span></div>
+  <div class="obest">最适合：<b>差异化 + 主题最扣</b>。航空信/邮票/邮戳直接呼应"侨批=漂洋过海的信"，独一份的视觉记忆点。</div>
+  <div class="stage">
+    <div><div class="sl oe"><div class="inner"><span class="pn" style="color:#2f5d8a">1 / 6</span><div class="stamp">✈️</div><div class="pmk">DEAR<br>YOU</div><div style="margin-top:auto"><div class="par">PAR AVION · 航空</div><h3 style="margin-top:10px">《给阿嬷的情书》<br>引爆海外华人圈</h3><div class="mono" style="margin-top:6px">📍 海外观影指南</div></div></div></div><div class="cap">钩子·航空信封</div></div>
+    <div><div class="sl oe"><div class="inner"><span class="pn" style="color:#2f5d8a">2 / 6</span><div class="par">全球投递 · 上映时间</div><div class="mono" style="margin-top:12px">🇲🇾 马来　<span class="hl">6/18 已映</span><br>🇸🇬 新加坡　6/18<br>🇬🇧 英国　<span class="hl">6/26 首映 ⭐</span><br>🇺🇸🇨🇦🇦🇺　陆续<br>🇫🇷🇮🇪🇯🇵🇰🇷🇹🇭🇻🇳 陆续</div><div class="mono" style="margin-top:auto;color:#7a6a52">投递到你的城市 →</div></div></div><div class="cap">全球档期·投递单</div></div>
+    <div><div class="sl oe"><div class="inner"><span class="pn" style="color:#2f5d8a">3 / 6</span><div class="stamp" style="font-size:18px">♥</div><div class="par">为什么必看 · 来信摘录</div><div class="letter" style="margin-top:16px">「以前那一代人的爱，是把赚的钱，寄回家乡。」</div><div class="by">— 槟城观众 来信</div></div></div><div class="cap">感言①·信摘</div></div>
+    <div><div class="sl oe"><div class="inner"><span class="pn" style="color:#2f5d8a">4 / 6</span><div class="pmk" style="right:14px">SG<br>1977</div><div class="par">来信摘录 · No.2</div><div class="letter" style="margin-top:16px">「我老爸最后一次汇钱回家乡，是 1977 年。」</div><div class="by">— 新加坡观众 · 评分 9.1</div></div></div><div class="cap">感言②·信摘</div></div>
+    <div><div class="sl oe"><div class="inner" style="justify-content:center;text-align:center"><span class="pn" style="color:#2f5d8a">5 / 6</span><div class="par" style="align-self:center">WorldFirst × Dear You</div><h3 style="margin:14px 0">万里汇赞助<br>英国首映</h3><div class="seal">6 · 26　LONDON</div><div class="mono" style="margin-top:12px;color:#7a6a52">和全球华人，一起拆这封信</div></div></div><div class="cap">赞助·邮戳</div></div>
+    <div><div class="sl oe"><div class="inner" style="justify-content:center;text-align:center"><span class="pn" style="color:#2f5d8a">6 / 6</span><div class="seal" style="background:#2f5d8a">海外的你</div><div class="letter" style="margin:14px 0">做生意 · 收款<br>把钱寄回家<br>也可以用万里汇</div><div class="by" style="text-align:center">不管你在哪，是谁</div><div class="logo" style="margin-top:12px">WorldFirst 万里汇</div></div></div><div class="cap">落点·品牌</div></div>
+  </div>
+</div>
+
+<p style="margin-top:48px;padding-top:20px;border-top:1px solid #d8d6d0;font-size:12px;color:#9aa0a8;line-height:1.9">
+视觉为 CSS 模拟的成品观感示意，真图请设计师按选定方向出（剧照/海报位用色块占位）。感言为研究实采的真实海外华人原话占位；署名"客户感言"需真实客户本人授权，走 A&I／法务。首映日期发布前二次核对院线。
+</p>
+
+</div>
+</body>
+</html>
