@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>20 个 carousel 方案 · 蹭《给阿嬷的情书》· 海内外同发</title>
+<style>
+:root{--ink:#16181d;--muted:#6b7280;--faint:#9aa0a8;--line:#e9eaed;--line2:#d8dade;--bg:#fff;--panel:#fafafb;
+--paper:#f4ede0;--paper2:#efe6d6;--paperink:#3a3026;--brand:#1c1f26;--gold:#b8860b;--green:#11a36b;--red:#c0392b;--blue:#2f6df6}
+*{box-sizing:border-box}html{-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.65}
+.wrap{max-width:1180px;margin:0 auto;padding:56px 30px 120px}
+.eyebrow{font-size:12px;letter-spacing:.16em;color:var(--faint);font-weight:600;margin:0 0 16px}
+.eyebrow a{color:var(--blue);text-decoration:none}.eyebrow a:hover{text-decoration:underline}
+h1{font-size:30px;letter-spacing:-.01em;margin:0 0 14px;font-weight:700;line-height:1.3}
+.sub{font-size:17px;color:var(--muted);max-width:84ch;margin:0 0 8px;line-height:1.6}
+.stamp{font-size:12.5px;color:var(--faint);margin-top:14px;line-height:1.85}.stamp b{color:var(--muted);font-weight:600}
+
+.spine{border:1px solid var(--line2);border-radius:14px;padding:18px 24px;margin:26px 0 0;background:var(--panel)}
+.spine .sl{font-size:11px;letter-spacing:.1em;color:var(--faint);font-weight:650;margin-bottom:11px}
+.spine ol{margin:0;padding-left:20px}.spine li{font-size:13.5px;color:#2a2d33;line-height:1.7;margin-bottom:4px}
+.spine li b{color:var(--ink);font-weight:650}
+
+h2{font-size:13px;letter-spacing:.08em;color:var(--faint);font-weight:650;margin:46px 0 6px}
+.h2sub{font-size:14px;color:var(--muted);margin:0 0 16px;max-width:84ch;line-height:1.7}
+
+.idx{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:880px){.idx{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.idx{grid-template-columns:1fr}}
+.ic{border:1px solid var(--line);border-radius:10px;padding:11px 13px;cursor:pointer;text-decoration:none;color:inherit;transition:border-color .14s}
+.ic:hover{border-color:var(--ink)}
+.ic .icn{font-size:11px;color:var(--faint);font-weight:680}
+.ic .ica{font-size:13.5px;font-weight:640;margin-top:3px;line-height:1.35}
+.ic .ich{font-size:11.5px;color:var(--muted);margin-top:4px}
+.ic.you{background:var(--panel);border-color:var(--gold)}
+
+.opt{margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+.opt .oh{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.opt .on{font-size:13px;font-weight:680;color:var(--faint)}
+.opt .ot{font-size:20px;font-weight:680;letter-spacing:-.01em;margin:0}
+.opt .obadge{font-size:10.5px;font-weight:680;color:var(--muted);border:1px solid var(--line2);border-radius:5px;padding:1px 7px}
+.opt .obadge.you{color:var(--gold);border-color:#ecd9b0}
+.opt .ometa{font-size:12.5px;color:var(--muted);margin:0 0 14px}.opt .ometa b{color:var(--ink);font-weight:640}
+
+.caro{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.caro::-webkit-scrollbar{height:8px}.caro::-webkit-scrollbar-thumb{background:var(--line2);border-radius:8px}
+.slide{flex:0 0 216px;scroll-snap-align:start;display:flex;flex-direction:column}
+.card{height:288px;border-radius:14px;padding:20px 18px;display:flex;flex-direction:column;position:relative;overflow:hidden;
+ background:var(--paper);border:1px solid #e2d6c0;color:var(--paperink)}
+.card.alt{background:var(--paper2)}
+.card.brand{background:var(--brand);border-color:#2a2e38;color:#f3f0ea}
+.card .sn{position:absolute;top:10px;right:12px;font-size:10px;font-weight:680;opacity:.5;font-variant-numeric:tabular-nums}
+.card .cc{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;white-space:pre-line;
+ font-size:14px;line-height:1.6;font-weight:560;letter-spacing:.005em;padding:6px 2px}
+.card.brand .cc{font-weight:600}
+.card .vv{font-size:10px;line-height:1.45;opacity:.6;border-top:1px solid rgba(0,0,0,.1);padding-top:7px;margin-top:6px}
+.card.brand .vv{border-top-color:rgba(255,255,255,.15)}
+.slide .scap{font-size:10px;color:var(--faint);margin-top:6px;text-align:center}
+
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;margin-top:6px}
+@media(max-width:760px){.meta{grid-template-columns:1fr}}
+.mrow{padding:9px 0;border-top:1px solid var(--line);font-size:12.5px;line-height:1.65;color:#2a2d33}
+.mrow .mk{font-size:10.5px;letter-spacing:.05em;color:var(--faint);font-weight:680;text-transform:uppercase;margin-bottom:3px}
+.mrow.full{grid-column:1/-1}
+.mrow b{color:var(--ink);font-weight:650}
+.note{grid-column:1/-1;margin-top:8px;font-size:12px;color:var(--red);line-height:1.6;background:#fdf6f5;border:1px solid #f0d9d5;border-radius:9px;padding:9px 13px}
+details.cap{grid-column:1/-1;margin-top:8px}
+details.cap summary{font-size:11.5px;color:var(--blue);cursor:pointer;font-weight:600;letter-spacing:.03em}
+details.cap .capbody{margin-top:8px;font-size:12.5px;color:#2a2d33;line-height:1.7;white-space:pre-line;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:12px 15px}
+
+.foot{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--faint);line-height:1.9}.foot b{color:var(--muted);font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="eyebrow">万里汇（WorldFirst） · 品牌账号 carousel 方案 · <a href="./">研究首页</a> · <a href="./overseas.html">海外受众</a> · <a href="./evidence.html">证据核查</a></p>
+<h1>20 个 carousel 方案：蹭《给阿嬷的情书》，海内外同发</h1>
+<p class="sub">每个都是逐张滑动图 + 配文 + 推理 + 证据。横向滑可以看到这条 post 长什么样：米色是钩子/内容张，深色是最后两张品牌张。20 个里方案 1 完全按你的原版，其余 19 个由 5 个独立 agent 出不同 angle。</p>
+<div class="stamp">2026年6月17日 &nbsp;&middot;&nbsp; 平台：Instagram / Facebook / 小红书 &nbsp;&middot;&nbsp; 文案中文为主，海外版可加英文副标 &nbsp;&middot;&nbsp; 这是文案与结构稿，不是最终视觉设计</div>
+
+<div class="spine">
+  <div class="sl">硬骨架（20 个都遵守你定的规则）</div>
+  <ol>
+    <li><b>淡化身份认同</b>。不碰祖国/统战/爱国（新加坡联合早报已把这片定性『统战』，真实风险）。立场：不管你是谁、在哪，跨境汇款是不变的使命。</li>
+    <li><b>蹭热点做钩子</b>。开头是纯电影/情绪，让刚看完的海外华人忍不住点开，不开口谈汇款、不强 promo。</li>
+    <li><b>价值后置</b>。万里汇只在最后两张：倒二张=赞助英国首映 + 全球首映列表 + 号召一起看；最后一张=使命（不管你在哪是谁，帮全球华人跨境做生意、汇款）。</li>
+  </ol>
+</div>
+
+<h2>20 个 angle 速览（点击跳到对应方案）</h2>
+<div class="idx" id="idx"></div>
+
+<div id="deck"></div>
+
+<div class="foot">
+<b>说明</b> &middot; 方案 1 为你的原版构想；方案 2–20 由 5 个独立 agent 分头产出，覆盖冷知识/数据/对照/金句/信件/方言/地图/爆款格式/史诗/幽默/UGC 等不同钩子。文案与配文均可直接使用或微调。证据来自本研究站前几页（小红书+海外华人实采）。<br>
+首映日期与场次发布前请二次核对院线；带『⚠』的方案有身份或史实注意点，已在该方案下注明；联名+公开主张出街前走 A&I／法务复核。
+</div>
+
+</div>
+<script src="carousels_data.js"></script>
+<script>
+const D = window.DECK || [];
+// 速览
+const idx = document.getElementById('idx');
+idx.innerHTML = D.map(o=>`<a class="ic${o.n===1?' you':''}" href="#opt${o.n}"><div class="icn">方案 ${o.n} · ${o.g}</div><div class="ica">${o.angle}</div><div class="ich">${o.hook}</div></a>`).join('');
+// deck
+const deck = document.getElementById('deck');
+deck.innerHTML = D.map(o=>{
+  const total=o.slides.length;
+  const slides=o.slides.map((s,i)=>{
+    const isBrand = i>=total-2;
+    const cls = isBrand?'brand':(i%2?'alt':'');
+    return `<div class="slide"><div class="card ${cls}"><div class="sn">${i+1}/${total}</div><div class="cc">${s.c}</div><div class="vv">画面：${s.v}</div></div><div class="scap">${isBrand?'品牌张':'钩子/内容'}</div></div>`;
+  }).join('');
+  const riskCls = (o.risk||'').includes('中')?' style="color:var(--red)"':'';
+  return `<div class="opt" id="opt${o.n}">
+    <div class="oh"><span class="on">方案 ${o.n}</span><h3 class="ot">${o.angle}</h3>
+      <span class="obadge${o.n===1?' you':''}">${o.g}</span>
+      <span class="obadge">${o.hook}</span>
+      <span class="obadge">${o.tone}</span>
+      <span class="obadge"${riskCls}>风险 ${o.risk}</span></div>
+    <div class="caro">${slides}</div>
+    <div class="meta">
+      <div class="mrow full"><div class="mk">价值怎么落</div>${o.land}</div>
+      <div class="mrow"><div class="mk">为什么这个钩子能蹭住</div>${o.why}</div>
+      <div class="mrow"><div class="mk">证据</div>${o.ev}</div>
+      <div class="mrow"><div class="mk">平台适配</div>${o.fit}</div>
+      <div class="mrow"><div class="mk">情绪</div>${o.tone}</div>
+      ${o.note?`<div class="note">${o.note}</div>`:''}
+      <details class="cap"><summary>展开可直接发布的配文 caption ↓</summary><div class="capbody">${o.cap}</div></details>
+    </div>
+  </div>`;
+}).join('');
+</script>
+</body>
+</html>
