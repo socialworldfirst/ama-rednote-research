@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>观影指南 · 3 页（时间表 / 用户评论 / 双入口）</title>
+<title>观影指南 · 3 套视觉 · 统一文案</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#eceae6;color:#16181d;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
-.wrap{max-width:1320px;margin:0 auto;padding:48px 26px 110px}
+.wrap{max-width:1240px;margin:0 auto;padding:48px 26px 110px}
 .eyebrow{font-size:12px;letter-spacing:.16em;color:#9aa0a8;font-weight:600;margin-bottom:14px}.eyebrow a{color:#2f6df6;text-decoration:none}
 h1{font-size:28px;font-weight:760;letter-spacing:-.01em;line-height:1.25;margin-bottom:12px}
 .lead{font-size:16px;color:#5b6068;max-width:84ch;line-height:1.6}.lead b{color:#16181d;font-weight:660}
 .struct{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 4px}
 .struct span{font-size:12px;color:#5b6068;background:#fff;border:1px solid #ddd;border-radius:20px;padding:5px 12px}.struct b{color:#16181d}
 .hint{font-size:13px;color:#8a8f98;margin-top:10px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:42px 30px;margin-top:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:42px 30px;margin-top:40px}
 .ohead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:3px}
 .ohead .oc{font-size:13px;font-weight:800;color:#fff;background:#16181d;width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 25px}
 .ohead h2{font-size:19px;font-weight:740}.ohead .vibe{font-size:12.5px;color:#8a8f98}
@@ -27,163 +27,136 @@ h1{font-size:28px;font-weight:760;letter-spacing:-.01em;line-height:1.25;margin-
 .nav:hover{background:#fff}.nav.prev{left:9px}.nav.next{right:9px}
 .dots{display:flex;gap:6px;justify-content:center;margin-top:13px}
 .dot{width:7px;height:7px;border-radius:50%;background:#c9c7c1;cursor:pointer;border:0;padding:0;transition:all .15s}.dot.on{background:#16181d;width:20px;border-radius:4px}
-.still{position:absolute;inset:0;z-index:0}.z{position:relative;z-index:2}
-.qr{width:46px;height:46px;border-radius:6px;background-color:#fff;background-image:linear-gradient(45deg,#1d1407 25%,transparent 25% 75%,#1d1407 75%),linear-gradient(45deg,#1d1407 25%,transparent 25% 75%,#1d1407 75%);background-size:12px 12px;background-position:0 0,6px 6px;border:3px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.z{position:relative;z-index:2}
 .reg{display:block;font-weight:800;border-radius:30px;padding:11px 16px;font-size:14px;text-align:center}.reg+.reg{margin-top:9px}
-/* timetable rows */
 .ttr{display:flex;gap:9px;align-items:flex-start;padding:5px 0;line-height:1.5}
 .ttr .dt{flex:0 0 40px;font-weight:800;font-variant-numeric:tabular-nums}
 .ttr .fl{flex:1;font-size:12.5px;line-height:1.75}
-.cmt+.cmt{margin-top:10px}
+.cl div{padding:5px 0;line-height:1.5}
 
-.oa{background:#14110c;color:#f2e8d5;font-family:Georgia,"Songti SC",serif;padding:30px 24px;justify-content:center}
-.oa::before,.oa::after{content:"";position:absolute;left:0;right:0;height:24px;background:#000;z-index:3}.oa::before{top:0}.oa::after{bottom:0}
-.oa .still{background:radial-gradient(120% 90% at 50% 22%,#4a3720,#231a0f 50%,#14110c 90%);opacity:.96}.oa .gold{color:#d8b46a}
-.oa h3{font-size:23px;line-height:1.3;font-weight:700}
-.oa .sm{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:#cda968;font-family:-apple-system,sans-serif;font-weight:600}
-.oa .body{font-size:13.5px;line-height:1.65;color:#e7dcc6;font-family:-apple-system,"PingFang SC",sans-serif}
-.oa .ttr{font-family:-apple-system,sans-serif;font-size:13px;color:#efe6d2}.oa .ttr.star{color:#d8b46a;font-weight:700}.oa .ttr .dt{color:#cda968}
-.oa .rule{height:1px;background:#cda96833;margin:10px 0}.oa .by{color:#cda968;font-family:-apple-system,sans-serif;font-size:12.5px}
-.oa .reg{font-family:-apple-system,sans-serif}
-
+/* B 手账 */
 .ob{background:#f6ead4;color:#3a3026;padding:26px 22px;font-family:-apple-system,"PingFang SC",sans-serif}
 .ob .tape{position:absolute;width:90px;height:26px;z-index:4;box-shadow:0 1px 3px rgba(0,0,0,.08)}.ob .tape.t1{top:-8px;left:34px;transform:rotate(-7deg);background:rgba(120,150,110,.34)}.ob .tape.t2{top:14px;right:-20px;transform:rotate(8deg);background:rgba(214,160,70,.36)}
 .ob h3{font-size:22px;font-weight:800;line-height:1.3}.ob .hand{font-family:"Bradley Hand","Comic Sans MS",cursive;color:#c2543a;font-size:15.5px}
 .ob .stamp{position:absolute;top:16px;right:16px;width:48px;height:56px;background:#fff;border:1px dashed #b98e57;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:24px;z-index:5;transform:rotate(5deg)}
-.ob .tick{background:#fff;border:1px dashed #cbb079;border-radius:8px;padding:12px 14px}.ob .tick .ttr .dt{color:#c2543a}.ob .tick .ttr.star{font-weight:800;color:#c2543a}
-.ob .note{background:#fffdf6;padding:11px 13px;box-shadow:0 3px 9px rgba(0,0,0,.08);border-radius:3px;font-size:13.5px;line-height:1.55}
-.ob .by{font-family:"Bradley Hand",cursive;color:#9a8463;font-size:12px;margin-top:4px}
+.ob .tick{background:#fff;border:1px dashed #cbb079;border-radius:8px;padding:11px 14px}.ob .tick .ttr .dt{color:#c2543a}.ob .tick .ttr.star{font-weight:800;color:#c2543a}
+.ob .ukn{font-size:11px;color:#c2543a;font-weight:700;margin-top:3px}
+.ob .note{background:#fffdf6;padding:13px 14px;box-shadow:0 3px 9px rgba(0,0,0,.08);border-radius:3px;font-size:13px;line-height:1.6}
 .ob .badge{display:inline-block;background:#c2543a;color:#fff;font-weight:800;font-size:12px;border-radius:20px;padding:3px 11px}
 .ob .reg{background:#c2543a;color:#fff}.ob .reg.alt{background:#3a3026}
+.ob .poem{font-size:15px;line-height:1.95;color:#5a4a37}
 
-.oc{background:#fff4ea;color:#1d1407;padding:0;font-family:-apple-system,"PingFang SC",sans-serif;font-weight:800}
-.oc .top{background:#e8442a;color:#fff;padding:20px 18px}.oc .bot{padding:18px;flex:1;display:flex;flex-direction:column}
-.oc h3{font-size:25px;line-height:1.15;letter-spacing:-.01em}.oc .huge{font-size:38px;line-height:1;letter-spacing:-.02em}
-.oc .kick{font-size:12px;font-weight:800;letter-spacing:.08em;background:#1d1407;color:#ffd23c;display:inline-block;padding:4px 10px;border-radius:4px}
-.oc .ttr{font-size:13px;border-bottom:1.5px dashed #e8b9a8}.oc .ttr .dt{color:#e8442a}.oc .ttr.star{background:#ffe9c2;margin:0 -6px;padding:6px;border:0;border-radius:6px}
-.oc .cmt{font-size:14.5px;font-weight:800;line-height:1.4}.oc .by{font-size:12px;font-weight:700;color:#9a6b53}
-.oc .cta{background:#1d1407;color:#fff;border-radius:10px;padding:11px 14px;font-size:14px;font-weight:800;text-align:center}.oc .cta .y{color:#ffd23c}
-.oc .reg{background:#e8442a;color:#fff}.oc .reg.alt{background:#1d1407;color:#ffd23c}
-
+/* D 编辑 */
 .od{background:#f6f4ef;color:#191919;padding:32px 26px;font-family:"Optima","Songti SC",Georgia,serif;justify-content:space-between}
 .od .lab{font-family:-apple-system,sans-serif;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:#a59f93;font-weight:600}
 .od h3{font-size:25px;font-weight:600;line-height:1.2}.od .accent{color:#8c2b22}
 .od .thin{height:1px;background:#1919191a;margin:11px 0}
-.od .ttr{font-family:-apple-system,sans-serif;font-size:13.5px;border-bottom:1px solid #19191912;padding:7px 0}.od .ttr .dt{color:#8c2b22;font-weight:640}.od .ttr.star{font-weight:640}
-.od .pq{font-family:"Optima",Georgia,serif;font-size:18px;line-height:1.45;font-weight:600}
+.od .rowd{display:flex;gap:9px;font-family:-apple-system,sans-serif;font-size:13px;border-bottom:1px solid #19191912;padding:7px 0;line-height:1.5}.od .rowd .dt{flex:0 0 46px;color:#8c2b22;font-weight:640}.od .rowd .fl{flex:1}
+.od .ukn{font-size:10.5px;color:#8c2b22;font-weight:600;letter-spacing:.02em;margin-top:4px}
+.od .cl div{font-family:-apple-system,"PingFang SC",sans-serif;font-size:12.5px;border-bottom:1px solid #19191910;color:#2c2c2a}
+.od .poem{font-size:18px;line-height:1.85;font-weight:600}
+.od .body{font-family:-apple-system,"PingFang SC",sans-serif;font-size:13px;line-height:1.7;color:#3a3a38}
 .od .by{font-family:-apple-system,sans-serif;font-size:11px;letter-spacing:.05em;color:#8c8678;text-transform:uppercase}
 .od .reg{background:#8c2b22;color:#fff}.od .reg.alt{background:#191919}
 
-.oe{padding:15px;background:linear-gradient(#f5efe1,#f5efe1) padding-box,repeating-linear-gradient(45deg,#c0392b 0 10px,#fff 10px 20px,#2f5d8a 20px 30px,#fff 30px 40px) border-box;border:8px solid transparent;color:#2a2016;font-family:-apple-system,"PingFang SC",sans-serif}
-.oe .inner{background:#f5efe1;flex:1;display:flex;flex-direction:column;padding:16px 15px;position:relative}
-.oe .par{font-family:"Courier New",monospace;font-size:10px;letter-spacing:.16em;color:#2f5d8a;font-weight:700;border:1px solid #2f5d8a;display:inline-block;padding:2px 6px;border-radius:2px}
-.oe h3{font-size:21px;font-weight:800;line-height:1.25;color:#3a2c1c}
-.oe .stamp{position:absolute;top:10px;right:10px;width:48px;height:56px;background:#fff;border:1px dashed #c0392b;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:24px;transform:rotate(4deg)}
-.oe .ttr{font-family:"Courier New",monospace;font-size:13px;color:#3a2c1c}.oe .ttr .dt{color:#c0392b;font-weight:700}.oe .ttr.star{font-weight:700;color:#c0392b}
-.oe .letter{font-family:"Songti SC",Georgia,serif;font-size:14.5px;line-height:1.6;color:#3a2c1c}
-.oe .by{font-family:"Courier New",monospace;font-size:10.5px;color:#7a6a52;margin-top:4px}
-.oe .seal{display:inline-block;background:#c0392b;color:#fff;font-weight:800;font-size:12.5px;border-radius:3px;padding:5px 12px}
-.oe .reg{background:#c0392b;color:#fff}.oe .reg.alt{background:#2f5d8a}
+/* C 大字报 */
+.oc{background:#fff4ea;color:#1d1407;padding:0;font-family:-apple-system,"PingFang SC",sans-serif;font-weight:800}
+.oc .top{background:#e8442a;color:#fff;padding:20px 18px}.oc .bot{padding:18px;flex:1;display:flex;flex-direction:column}
+.oc h3{font-size:24px;line-height:1.15}.oc .huge{font-size:34px;line-height:1.05;letter-spacing:-.02em}
+.oc .kick{font-size:12px;font-weight:800;letter-spacing:.08em;background:#1d1407;color:#ffd23c;display:inline-block;padding:4px 10px;border-radius:4px}
+.oc .ttr{font-size:13px;border-bottom:1.5px dashed #e8b9a8}.oc .ttr .dt{color:#e8442a}.oc .ttr.star{background:#ffe9c2;margin:0 -6px;padding:6px;border:0;border-radius:6px}
+.oc .ukn{font-size:11px;color:#e8442a;font-weight:800;margin-top:4px}
+.oc .cl div{font-size:13px;font-weight:700;line-height:1.4;border-bottom:1px dashed #f0cdb8}
+.oc .poem{font-size:18px;font-weight:800;line-height:1.7;color:#1d1407}
+.oc .cta{background:#1d1407;color:#fff;border-radius:10px;padding:11px 14px;font-size:13.5px;font-weight:800;text-align:center;line-height:1.4}.oc .cta .y{color:#ffd23c}
+.oc .reg{background:#e8442a;color:#fff}.oc .reg.alt{background:#1d1407;color:#ffd23c}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<p class="eyebrow">万里汇（WorldFirst） · 观影指南 · 3 页滚动图 · <a href="./">研究首页</a> · <a href="./carousels.html">21 方案 deck</a></p>
-<h1>观影指南 · 3 页（时间表 / 用户评论 / 双入口）</h1>
-<p class="lead">第 1 页以<b>全球上映时间表</b>为主视觉（档期已按公开报道核对），标题带<b>万里汇赞助英国首映</b>；第 2 页<b>为什么必看 · 我们用户的评论</b>；第 3 页落到<b>不论国内还是海外都能用万里汇</b>，给出<b>国内主体入口 / 海外主体入口</b>两个口子。5 套视觉与口吻各不同。</p>
+<p class="eyebrow">万里汇（WorldFirst） · 观影指南 · 3 套视觉 · 统一文案 · <a href="./">研究首页</a> · <a href="./carousels.html">21 方案 deck</a></p>
+<h1>观影指南 · 3 套视觉，文案统一锁定</h1>
+<p class="lead">保留<b>手账 / 编辑 / 大字报</b>三套，文案从这版起统一。P1 排片表（标注万里汇赞助英国首映）+「致敬每一位闯世界的人」；P2 为什么必看·万里汇的朋友们说（5 条）；P3 品牌叙事「从前银信跨山海…」+ 国内主体 / 海外主体双入口。</p>
 <div class="struct">
-  <span><b>1</b> 海外上映时间表 + 万里汇赞助英国首映</span><span><b>2</b> 为什么必看 · 我们用户的评论</span><span><b>3</b> 国内主体入口 / 海外主体入口</span>
+  <span><b>P1</b> 排片表 + 赞助英国首映 + 致敬闯世界的人</span><span><b>P2</b> 为什么必看 · 朋友们说（5 条）</span><span><b>P3</b> 品牌叙事 + 国内/海外双入口</span>
 </div>
-<p class="hint">▶ 点箭头 / 圆点 / 键盘 ← → 翻页，触屏左右滑。档期：6/18 新马港澳文 · 6/25 澳新 · 6/26 英爱美加日 · 法泰越陆续。</p>
+<p class="hint">▶ 点箭头 / 圆点 / 键盘 ← → 翻页，触屏左右滑。档期已按公开报道核对，以官方为准。</p>
 
 <div class="grid">
 
-<!-- A -->
-<div>
-  <div class="ohead"><span class="oc">A</span><h2>胶片电影感</h2><span class="vibe">moody · 情绪片</span></div>
-  <div class="concept">口吻：<b>克制电影感</b>，适合 IG / 品牌情绪片。</div>
-  <div class="show"><div class="frame"><div class="counter"></div><div class="slides">
-    <div class="sl oa active"><div class="still"></div><div class="z" style="width:100%"><div class="sm" style="text-align:center">海外陆续上映</div><h3 style="text-align:center;margin:8px 0 14px">《阿嬷的<span class="gold">情书</span>》<br>海外档期</h3>
-      <div class="ttr"><span class="dt">6/18</span><span class="fl">🇸🇬 新加坡 · 🇲🇾 马来西亚 · 🇭🇰 香港 · 🇲🇴 澳门 · 🇧🇳 文莱</span></div>
-      <div class="ttr"><span class="dt">6/25</span><span class="fl">🇦🇺 澳大利亚 · 🇳🇿 新西兰</span></div>
-      <div class="ttr star"><span class="dt">6/26</span><span class="fl">🇬🇧 英国 · 🇮🇪 爱尔兰 · 🇺🇸 美国 · 🇨🇦 加拿大 · 🇯🇵 日本</span></div>
-      <div class="ttr"><span class="dt">陆续</span><span class="fl">🇫🇷 法国 · 🇹🇭 泰国 · 🇻🇳 越南</span></div>
-      <div class="rule"></div><div class="body" style="text-align:center;color:#d8b46a">万里汇赞助英国首映 · 6/26 LONDON</div></div></div>
-    <div class="sl oa" style="justify-content:center"><div class="still"></div><div class="z"><div class="sm">为什么必看 · 我们用户说</div><div class="body" style="margin-top:14px">「看完才明白，我每月给爸妈打的那笔钱，就是我的侨批。一定要去看。」</div><div class="by" style="margin-top:6px">—— 万里汇用户</div><div class="body" style="margin-top:14px">「散场我在车里坐了十分钟，然后给阿嬷打了电话。」</div><div class="by" style="margin-top:6px">—— 万里汇用户</div></div></div>
-    <div class="sl oa" style="justify-content:center;text-align:center"><div class="still" style="background:#14110c"></div><div class="z"><h3 style="font-size:21px">不论在国内还是海外<br>都可以用万里汇</h3><div class="body" style="margin:12px 0">跨境收款 · 把钱寄回家</div><span class="reg" style="background:#d8b46a;color:#14110c">国内主体入口 →</span><span class="reg" style="background:transparent;color:#d8b46a;border:1px solid #d8b46a">海外主体入口 →</span><div class="by" style="margin-top:10px">worldfirst.com</div></div></div>
-  </div><button class="nav prev">‹</button><button class="nav next">›</button></div><div class="dots"></div></div>
-</div>
-
-<!-- B -->
+<!-- B 手账 -->
 <div>
   <div class="ohead"><span class="oc">B</span><h2>暖色手账剪贴</h2><span class="vibe">UGC · 女生风</span></div>
-  <div class="concept">口吻：<b>亲密手账</b>，适合小红书原生、高互动。</div>
+  <div class="concept">小红书原生、高互动。</div>
   <div class="show"><div class="frame"><div class="counter"></div><div class="slides">
-    <div class="sl ob active"><div class="tape t1"></div><div class="tape t2"></div><div class="stamp">📽️</div><div class="z" style="margin-top:14px"><div class="hand" style="font-size:17px">《阿嬷的情书》海外陆续上映 🔥</div><h3 style="margin:6px 0 12px">先收好排片表 📌</h3>
+    <div class="sl ob active"><div class="tape t1"></div><div class="tape t2"></div><div class="stamp">📽️</div><div class="z" style="margin-top:12px"><div class="hand" style="font-size:16px">海外陆续上映 🔥</div><h3 style="margin:4px 0 10px">《阿嬷的情书》<br>海外排片表 📌</h3>
       <div class="tick">
         <div class="ttr"><span class="dt">6/18</span><span class="fl">🇸🇬 新加坡 · 🇲🇾 马来西亚 · 🇭🇰 香港 · 🇲🇴 澳门 · 🇧🇳 文莱</span></div>
         <div class="ttr"><span class="dt">6/25</span><span class="fl">🇦🇺 澳大利亚 · 🇳🇿 新西兰</span></div>
-        <div class="ttr star"><span class="dt">6/26</span><span class="fl">🇬🇧 英国 · 🇮🇪 爱尔兰 · 🇺🇸 美国 · 🇨🇦 加拿大 · 🇯🇵 日本</span></div>
+        <div class="ttr star"><span class="dt">6/26</span><span class="fl">🇬🇧 英国 ⭐ · 🇮🇪 爱尔兰 · 🇺🇸 美国 · 🇨🇦 加拿大 · 🇯🇵 日本</span></div>
         <div class="ttr"><span class="dt">陆续</span><span class="fl">🇫🇷 法国 · 🇹🇭 泰国 · 🇻🇳 越南</span></div>
-      </div><div class="hand" style="margin-top:8px;text-align:center">万里汇赞助英国首映 · 6/26 💌</div></div></div>
-    <div class="sl ob"><div class="tape t1"></div><div class="z" style="margin-top:14px"><div class="badge">为什么必看 · 我们用户说</div><div class="note" style="transform:rotate(-1.5deg);margin-top:12px">「散场哭花了妆，回家就给阿嬷转了钱。强烈推荐！」<div class="by">—— 万里汇用户</div></div><div class="note" style="transform:rotate(1deg)">「我也是一个人在外面打拼，这部戏全说中了。」<div class="by">—— 万里汇用户</div></div></div></div>
-    <div class="sl ob" style="justify-content:center;text-align:center"><div class="tape t1"></div><div class="stamp">🌏</div><div class="z"><h3>国内 · 海外<br>都能用万里汇</h3><div class="hand" style="margin:10px 0">跨境收款、寄钱回家</div><span class="reg">国内主体入口 →</span><span class="reg alt">海外主体入口 →</span><div class="hand" style="margin-top:9px">worldfirst.com</div></div></div>
+        <div class="ukn">⭐ 🇬🇧 英国首映 · 万里汇赞助</div>
+      </div><div class="hand" style="margin-top:9px;text-align:center;line-height:1.5">万里汇携手《给阿嬷的情书》<br>致敬每一位「闯世界」的人 💌</div></div></div>
+    <div class="sl ob"><div class="tape t1"></div><div class="z" style="margin-top:14px"><div class="badge">为什么必看 · 万里汇的朋友们说</div><div class="note" style="margin-top:12px"><div class="cl">
+      <div>「我们这代人在外面打拼，这部戏全说中了。」</div>
+      <div>「9.1 分真不是吹的。身在海外必看！」</div>
+      <div>「我也是那个寄钱回家的人，看哭了。」</div>
+      <div>「散场后，我给我的阿嬷打了电话。」</div>
+      <div>「看完才明白，我每月给爸妈打的那笔钱，就是我的侨批。」</div>
+    </div></div></div></div>
+    <div class="sl ob" style="justify-content:center"><div class="tape t1"></div><div class="stamp">💌</div><div class="z"><div class="poem">从前，银信跨山海，纸短情长；<br>如今，万里汇秒达，心意如常。<br>从一纸侨批，到数字闪汇，<br>改变的是速度，不变的是守护。</div><div class="hand" style="margin:12px 0 10px;text-align:center">不论在哪，都可以用万里汇 · 跨境收付</div><span class="reg">国内主体 →</span><span class="reg alt">海外主体 →</span></div></div>
   </div><button class="nav prev">‹</button><button class="nav next">›</button></div><div class="dots"></div></div>
 </div>
 
-<!-- C -->
-<div>
-  <div class="ohead"><span class="oc">C</span><h2>大字报标题党</h2><span class="vibe">高对比 · 干货</span></div>
-  <div class="concept">口吻：<b>利落数字</b>，适合小红书涨收藏。</div>
-  <div class="show"><div class="frame"><div class="counter"></div><div class="slides">
-    <div class="sl oc active"><div class="top"><div class="kick">海外陆续上映 📍</div><h3 style="margin-top:10px;font-size:23px">《阿嬷的情书》<br>全球档期</h3></div><div class="bot">
-      <div class="ttr star"><span class="dt">6/26</span><span class="fl">🇬🇧 英国 · 🇮🇪 爱尔兰 · 🇺🇸 美国 · 🇨🇦 加拿大 · 🇯🇵 日本</span></div>
-      <div class="ttr"><span class="dt">6/18</span><span class="fl">🇸🇬 新加坡 · 🇲🇾 马来西亚 · 🇭🇰 香港 · 🇲🇴 澳门 · 🇧🇳 文莱</span></div>
-      <div class="ttr"><span class="dt">6/25</span><span class="fl">🇦🇺 澳大利亚 · 🇳🇿 新西兰</span></div>
-      <div class="ttr" style="border:0"><span class="dt">陆续</span><span class="fl">🇫🇷 法国 · 🇹🇭 泰国 · 🇻🇳 越南</span></div>
-      <div class="cta" style="margin-top:auto;background:#1d1407">万里汇赞助英国首映 · <span class="y">6/26</span></div></div></div>
-    <div class="sl oc"><div class="top"><div class="kick" style="background:#fff;color:#e8442a">为什么必看 · 用户说</div><div class="cmt" style="margin-top:12px;color:#fff">「9.1 分真不是吹的。身在海外的，必看。」</div><div class="by" style="color:#ffd2b8;margin-top:6px">—— 万里汇用户</div></div><div class="bot"><div class="cmt">「看完我盯着汇款记录看了好久。」</div><div class="by">—— 万里汇用户</div></div></div>
-    <div class="sl oc"><div class="bot" style="flex:1;justify-content:center;text-align:center"><div class="kick">国内 / 海外 主体都能注册</div><div class="huge" style="margin:14px 0;color:#e8442a">都能用<br>万里汇</div><span class="reg">国内主体入口 →</span><span class="reg alt">海外主体入口 →</span><div style="display:flex;gap:10px;align-items:center;justify-content:center;margin-top:12px"><span class="qr"></span><span style="font-size:12px;color:#5b6068;font-weight:700;text-align:left">扫码进入<br>worldfirst.com</span></div></div></div>
-  </div><button class="nav prev">‹</button><button class="nav next">›</button></div><div class="dots"></div></div>
-</div>
-
-<!-- D -->
+<!-- D 编辑 -->
 <div>
   <div class="ohead"><span class="oc">D</span><h2>极简编辑杂志风</h2><span class="vibe">留白 · 高级感</span></div>
-  <div class="concept">口吻：<b>克制·高级</b>，适合品牌门面 / IG。</div>
+  <div class="concept">品牌门面 / IG。</div>
   <div class="show"><div class="frame"><div class="counter"></div><div class="slides">
     <div class="sl od active"><div class="z"><div class="lab">Now Showing · 海外陆续上映</div><h3 style="margin-top:8px">《阿嬷的情书》</h3></div><div class="z">
-      <div class="ttr star"><span class="dt">6 / 26</span><span class="fl">🇬🇧 英国 · 🇮🇪 爱尔兰 · 🇺🇸 美国 · 🇨🇦 加拿大 · 🇯🇵 日本</span></div>
-      <div class="ttr"><span class="dt">6 / 18</span><span class="fl">🇸🇬 新加坡 · 🇲🇾 马来西亚 · 🇭🇰 香港 · 🇲🇴 澳门 · 🇧🇳 文莱</span></div>
-      <div class="ttr"><span class="dt">6 / 25</span><span class="fl">🇦🇺 澳大利亚 · 🇳🇿 新西兰</span></div>
-      <div class="ttr" style="border:0"><span class="dt">陆续</span><span class="fl">🇫🇷 法国 · 🇹🇭 泰国 · 🇻🇳 越南</span></div></div>
-      <div class="z"><div class="thin"></div><div class="lab">万里汇赞助英国首映 · 6 · 26 London</div></div></div>
-    <div class="sl od" style="justify-content:center"><div class="z"><div class="lab">为什么必看 · 我们用户说</div><div class="pq" style="margin:14px 0">「我们这代人在外面打拼，这部戏全说中了。」</div><div class="by">万里汇用户</div><div class="thin"></div><div class="pq" style="font-size:15px;font-weight:500">「看完，给家里多打了一笔。」</div><div class="by">万里汇用户</div></div></div>
-    <div class="sl od" style="justify-content:center"><div class="z" style="text-align:center"><div class="lab">国内 · 海外 主体皆可</div><div class="pq" style="margin:14px 0">不论在哪<br><span class="accent">都可以用万里汇</span></div><span class="reg">国内主体入口 →</span><span class="reg alt">海外主体入口 →</span><div class="by" style="margin-top:9px">worldfirst.com</div></div></div>
+      <div class="rowd"><span class="dt">6 / 18</span><span class="fl">🇸🇬 新加坡 · 🇲🇾 马来西亚 · 🇭🇰 香港 · 🇲🇴 澳门 · 🇧🇳 文莱</span></div>
+      <div class="rowd"><span class="dt">6 / 25</span><span class="fl">🇦🇺 澳大利亚 · 🇳🇿 新西兰</span></div>
+      <div class="rowd star"><span class="dt">6 / 26</span><span class="fl">🇬🇧 英国 ⭐ · 🇮🇪 爱尔兰 · 🇺🇸 美国 · 🇨🇦 加拿大 · 🇯🇵 日本</span></div>
+      <div class="rowd" style="border:0"><span class="dt">陆续</span><span class="fl">🇫🇷 法国 · 🇹🇭 泰国 · 🇻🇳 越南</span></div>
+      <div class="ukn">⭐ 英国首映 · 万里汇赞助</div></div>
+      <div class="z"><div class="thin"></div><div class="body">万里汇携手《给阿嬷的情书》，致敬每一位「闯世界」的人。</div></div></div>
+    <div class="sl od"><div class="z"><div class="lab">为什么必看 · 万里汇的朋友们说</div></div><div class="z"><div class="cl">
+      <div>「我们这代人在外面打拼，这部戏全说中了。」</div>
+      <div>「9.1 分真不是吹的。身在海外必看！」</div>
+      <div>「我也是那个寄钱回家的人，看哭了。」</div>
+      <div>「散场后，我给我的阿嬷打了电话。」</div>
+      <div style="border:0">「看完才明白，我每月给爸妈打的那笔钱，就是我的侨批。」</div>
+    </div></div><div class="z"><div class="by">— 万里汇的朋友们</div></div></div>
+    <div class="sl od" style="justify-content:center"><div class="z"><div class="poem">从前，银信跨山海，<br>纸短情长；<br>如今，<span class="accent">万里汇秒达</span>，<br>心意如常。</div><div class="body" style="margin-top:10px">从一纸侨批，到数字闪汇，<br>改变的是速度，不变的是守护。</div></div><div class="z" style="text-align:center"><div class="thin"></div><div class="lab" style="margin-bottom:10px">不论在哪，都可以用万里汇 · 跨境收付</div><span class="reg">国内主体 →</span><span class="reg alt">海外主体 →</span></div></div>
   </div><button class="nav prev">‹</button><button class="nav next">›</button></div><div class="dots"></div></div>
 </div>
 
-<!-- E -->
+<!-- C 大字报 -->
 <div>
-  <div class="ohead"><span class="oc">E</span><h2>航空信复古邮政</h2><span class="vibe">最扣侨批 · 差异化</span></div>
-  <div class="concept">口吻：<b>像拆一封信</b>，记忆点最独。</div>
+  <div class="ohead"><span class="oc">C</span><h2>大字报标题党</h2><span class="vibe">高对比 · 干货</span></div>
+  <div class="concept">小红书涨收藏。</div>
   <div class="show"><div class="frame"><div class="counter"></div><div class="slides">
-    <div class="sl oe active"><div class="inner"><div class="stamp">✈️</div><div class="par">全球投递时刻表</div><h3 style="margin:10px 0 10px">《阿嬷的情书》<br>海外陆续上映</h3>
+    <div class="sl oc active"><div class="top"><div class="kick">海外陆续上映 📍</div><h3 style="margin-top:10px;font-size:22px">《阿嬷的情书》<br>全球档期</h3></div><div class="bot">
+      <div class="ttr star"><span class="dt">6/26</span><span class="fl">🇬🇧 英国 ⭐ · 🇮🇪 爱尔兰 · 🇺🇸 美国 · 🇨🇦 加拿大 · 🇯🇵 日本</span></div>
       <div class="ttr"><span class="dt">6/18</span><span class="fl">🇸🇬 新加坡 · 🇲🇾 马来西亚 · 🇭🇰 香港 · 🇲🇴 澳门 · 🇧🇳 文莱</span></div>
-      <div class="ttr"><span class="dt">6/25</span><span class="fl">🇦🇺 澳大利亚 · 🇳🇿 新西兰</span></div>
-      <div class="ttr star"><span class="dt">6/26</span><span class="fl">🇬🇧 英国 · 🇮🇪 爱尔兰 · 🇺🇸 美国 · 🇨🇦 加拿大 · 🇯🇵 日本</span></div>
-      <div class="ttr"><span class="dt">陆续</span><span class="fl">🇫🇷 法国 · 🇹🇭 泰国 · 🇻🇳 越南</span></div>
-      <div class="by" style="margin-top:auto">万里汇赞助英国首映 · 6/26</div></div></div>
-    <div class="sl oe"><div class="inner"><div class="par">为什么必看 · 来自我们用户</div><div class="letter" style="margin-top:14px">「像一封写给我的信。海外的朋友，别错过。」<div class="by">— 万里汇用户</div></div><div class="letter" style="margin-top:10px">「我也是那个寄钱回家的人，看哭了。」<div class="by">— 万里汇用户</div></div></div></div>
-    <div class="sl oe"><div class="inner" style="justify-content:center;text-align:center"><div class="seal" style="background:#2f5d8a">回 信</div><div class="letter" style="margin:12px 0">不论主体在国内还是海外<br>都能用万里汇</div><span class="reg">国内主体入口 →</span><span class="reg alt">海外主体入口 →</span><div class="by" style="text-align:center;margin-top:8px">worldfirst.com</div></div></div>
+      <div class="ttr" style="border:0"><span class="dt">6/25</span><span class="fl">🇦🇺 澳大利亚 · 🇳🇿 新西兰 ｜ 陆续 🇫🇷 🇹🇭 🇻🇳</span></div>
+      <div class="ukn">⭐ 英国首映 · 万里汇赞助</div>
+      <div class="cta" style="margin-top:auto">万里汇携手《给阿嬷的情书》<br>致敬每一位<span class="y">「闯世界」</span>的人</div></div></div>
+    <div class="sl oc"><div class="top"><div class="kick" style="background:#fff;color:#e8442a">为什么必看 · 朋友们说</div><div style="margin-top:12px;font-size:17px;font-weight:800;color:#fff;line-height:1.4">「我也是那个寄钱回家的人，看哭了。」</div></div><div class="bot"><div class="cl">
+      <div>「我们这代人在外面打拼，全说中了。」</div>
+      <div>「9.1 分真不是吹的。身在海外必看！」</div>
+      <div>「散场后，我给我的阿嬷打了电话。」</div>
+      <div style="border:0">「我每月给爸妈打的那笔钱，就是我的侨批。」</div>
+    </div></div></div>
+    <div class="sl oc"><div class="bot" style="flex:1;justify-content:center"><div class="poem">从前，银信跨山海，纸短情长；<br>如今，万里汇秒达，心意如常。</div><div style="font-size:14px;font-weight:700;color:#9a6b53;margin-top:10px;line-height:1.5">从一纸侨批到数字闪汇，改变的是速度，不变的是守护。</div><div class="kick" style="margin:14px 0 10px">不论在哪，都能用万里汇 · 跨境收付</div><span class="reg">国内主体 →</span><span class="reg alt">海外主体 →</span></div></div>
   </div><button class="nav prev">‹</button><button class="nav next">›</button></div><div class="dots"></div></div>
 </div>
 
 </div>
 
 <p style="margin-top:46px;padding-top:20px;border-top:1px solid #d8d6d0;font-size:12px;color:#9aa0a8;line-height:1.9">
-档期按 2026年6月 公开报道核对（dealmoon / 南都 / JP China Press 等）：6/18 新马港澳文 · 6/25 澳新 · 6/26 英爱美加日 · 法泰越陆续；以官方最终公告为准。视觉为 CSS 模拟成品观感，真图交设计师。<b style="color:#5b6068">「我们用户的评论」为示意</b>，正式发布需真实客户授权（不可伪造，走 A&I／法务）。两个注册入口为示意，需接入万里汇真实「国内主体 / 海外主体」注册链接；资格与表述以合规口径为准。
+档期按 2026年6月 公开报道核对（dealmoon / 南都 / JP China Press 等），以官方最终公告为准；英国首映礼日期以发行方/赞助合同为准。视觉为 CSS 模拟成品观感，真图交设计师。<b style="color:#5b6068">「万里汇的朋友们说」5 条为示意</b>，正式发布需真实客户本人授权（不可伪造，走 A&I／法务）。「国内主体 / 海外主体」两个入口为示意，需接入万里汇真实注册链接；资格与表述以合规口径为准。
 </p>
 
 </div>
